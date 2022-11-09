@@ -1,6 +1,3 @@
-# README
-Thank you for using our product.
-This extension is developed by [WebbyTroops Technologies](https://webbytroops.com/). Feel free to write us back in case of any query or feedback.
 
 ## NOTE
 This extension is build for AddOn APIs of Product REST APIs.
