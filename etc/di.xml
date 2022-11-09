@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © WebbyTroops Technologies. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+   
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\BestSellerRepositoryInterface" type="WebbyTroops\AddOnProductAPIs\Model\BestSellerRepository" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\BestSellerInterface" type="WebbyTroops\AddOnProductAPIs\Model\Data\BestSeller" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\BestSellerSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\CompareProductsRepositoryInterface" type="WebbyTroops\AddOnProductAPIs\Model\CompareProductsRepository" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\CompareProductsInterface" type="WebbyTroops\AddOnProductAPIs\Model\Data\CompareProducts" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\CompareProductsSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\CrosssellApiRepositoryInterface" type="WebbyTroops\AddOnProductAPIs\Model\CrosssellRepository" />
+    
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\MostViewedRepositoryInterface" type="WebbyTroops\AddOnProductAPIs\Model\MostViewedRepository" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\MostViewedInterface" type="WebbyTroops\AddOnProductAPIs\Model\Data\MostViewed" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\MostViewedSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+    
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\RecentlyViewedApiRepositoryInterface" type="WebbyTroops\AddOnProductAPIs\Model\RecentlyViewedRepository" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\ProductDetailsRepositoryInterface" type="WebbyTroops\AddOnProductAPIs\Model\ProductDetailsRepository" />
+    <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\RecentlyViewedSearchResultsInterface" type="Magento\Framework\Api\SearchResults" />
+     <preference for="WebbyTroops\AddOnProductAPIs\Api\Data\RecentlyViewedInterface" type="WebbyTroops\AddOnProductAPIs\Model\Data\RecentlyViewed" />
+</config>

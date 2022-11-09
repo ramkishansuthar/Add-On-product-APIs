@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © WebbyTroops Technologies. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    
+    <!-- Best Seller Products API endpoints-->
+    <route url="/V1/best-seller" method="GET">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\BestSellerRepositoryInterface" method="getList"/>        
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    
+    <!-- Compare products API endpoints-->
+    <route url="/V1/compare-products" method="GET">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\CompareProductsRepositoryInterface" method="getList"/>        
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    
+    <!-- Cross sell products API endpoints-->
+    <route url="/V1/cross-sell/mine" method="GET">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\CrosssellApiRepositoryInterface" method="getList"/>        
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data> 
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/guest-cross-sell/:cartId" method="GET">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\CrosssellApiRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    
+    <!-- Most Viewed products API endpoints-->
+    <route url="/V1/most-viewed/mine" method="GET">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\MostViewedRepositoryInterface" method="getList"/>        
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    
+    <!-- Recently Viewed products API endpoints-->
+        <route url="/V1/recently-viewed/mine" method="POST">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\RecentlyViewedApiRepositoryInterface" method="getList"/>        
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data> 
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    <route url="/V1/product-details/:sku" method="GET">
+        <service class="WebbyTroops\AddOnProductAPIs\Api\ProductDetailsRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data> 
+            <parameter name="customerId" force="true">%customer_id%</parameter>
+        </data>
+    </route>
+    
+</routes>

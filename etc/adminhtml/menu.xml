@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © WebbyTroops Technologies Pvt. Ltd. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WebbyTroops_AddOnProductAPIs::addon_apis" title="Addon Product APIs" translate="title" sortOrder="60" module="WebbyTroops_AddOnProductAPIs" parent="WebbyTroops_Core::core" resource="WebbyTroops_AddOnProductAPIs::addon_apis"/>
+        <add id="WebbyTroops_AddOnProductAPIs::configuration" title="Configuration" translate="title" module="WebbyTroops_AddOnProductAPIs" sortOrder="100" parent="WebbyTroops_AddOnProductAPIs::addon_apis" action="adminhtml/system_config/edit/section/addonapis" resource="WebbyTroops_AddOnProductAPIs::configuration"/>
+    </menu>
+</config>

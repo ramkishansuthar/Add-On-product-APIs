@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © WebbyTroops Technologies. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="addonapis" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>AddOn ProductAPIs</label>
+            <tab>webbytroops</tab>
+            <resource>WebbyTroops_AddOnProductAPIs::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="license_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>WebbyTroops\Core\Block\Adminhtml\System\Config\Form\License</frontend_model>
+                    <label>Licesnse Key</label>
+                    <hint>AddOnProductAPIs</hint>
+                </field>
+                <field id="valid_license_key" translate="label" type="hidden" sortOrder="30" showInDefault="0" showInWebsite="0" showInStore="0">
+                    <label>Valid Licesnse Key</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

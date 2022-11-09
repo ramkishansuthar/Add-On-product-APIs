@@ -1,0 +1,30 @@
+{
+   "name": "webbytroops/add-on-product-apis",
+   "description": "WebbyTroops Add on Product APIs",
+   "require": {
+   },
+   "type": "magento2-module",
+   "version": "1.1.0",
+   "license": [
+       "OSL-3.0",
+       "AFL-3.0"
+   ],
+    "keywords": [
+    
+   ],
+   "authors": [
+       {
+           "name": "WebbyTroops",
+           "email": "contact@webbytroops.com",
+           "homepage": "https://webbytroops.com"
+       }
+   ],
+   "autoload": {
+       "files": [
+           "registration.php"
+       ],
+       "psr-4": {
+           "WebbyTroops\\AddOnProductAPIs\\": ""
+       }
+   }
+}
